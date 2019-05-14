@@ -1,9 +1,9 @@
 public abstract class Piece {
 
-  protected String nom;
-  protected String couleur;
-  protected int ligne;
-  protected int colonne ;
+  private String nom;
+  private String couleur;
+  private int ligne;
+  private int colonne ;
 
   public Piece() {}
 
@@ -53,30 +53,30 @@ public abstract class Piece {
     this.colonne = colonne;
   }
 
-  public boolean caseValide(int ligne, int colonne, int ligneA, int colonneA){
-    if(ligne == ligneA && colonne == colonneA)
+  public boolean caseValide(int ligneA, int colonneA){
+    if(this.getLigne() == ligneA && this.getColonne() == colonneA)
       return false;
-    if(ligneA < 0 || ligneA > 7 || colonneA < 0 || colonneA > 7 || ligne < 0 || ligne > 7 || colonne < 0 || colonne > 7)
+    if(ligneA < 0 || ligneA > 7 || colonneA < 0 || colonneA > 7 || this.getLigne() < 0 || this.getLigne() > 7 || this.getColonne() < 0 || this.getColonne() > 7)
       return false;
     return true;
   }
 
-  public  boolean mouvementValide(int ligne, int colonne, int ligneA, int colonneA){
+  public  boolean mouvementValide(int ligneA, int colonneA){
     return true;
   }
 
-  public void deplacement(Echequier p, int ligne, int colonne, int ligneA,int colonneA) {
-    if (mouvementValide(ligne, colonne, ligneA, colonneA)==true) {
+  public void deplacement(Echequier p, int ligneA,int colonneA) {
+    if (mouvementValide(ligneA, colonneA)==true) {
 
       if ((p.getCase(ligneA,colonneA))==null){
         p.setCase(ligneA,colonneA,this);
-        p.retirerPiece(ligne,colonne);
+        p.retirerPiece(this.getLigne(),this.getColonne());
       }
       if ((p.getCase(ligneA, colonneA).getCouleur()!= this.couleur)) {
         p.setCase(ligneA,colonneA,this);
-        p.retirerPiece(ligne,colonne);
+        p.retirerPiece(this.getLigne(),this.getColonne());
       }
-        }
+    }
     else{
     p.grille();
     System.out.println("Votre déplacement est impossible");
