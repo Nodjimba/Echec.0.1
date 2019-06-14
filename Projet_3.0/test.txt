@@ -1,0 +1,63 @@
+Tour	blanc	0	0
+
+Cavalier	blanc	0	1
+
+Fou	blanc	0	2
+
+Dame	blanc	0	3
+
+Roi	blanc	0	4
+
+Fou	blanc	0	5
+
+Cavalier	blanc	0	6
+
+Tour	blanc	7	0
+
+Pion	blanc	1	0
+
+Pion	blanc	1	1
+
+Pion	blanc	1	2
+
+Pion	blanc	1	3
+
+Pion	blanc	1	4
+
+Pion	blanc	1	5
+
+Pion	blanc	1	6
+
+Pion	blanc	1	7
+
+Pion	noir	6	0
+
+Pion	noir	6	1
+
+Pion	noir	6	2
+
+Pion	noir	6	3
+
+Pion	noir	6	4
+
+Pion	noir	6	5
+
+Pion	noir	6	6
+
+Pion	noir	6	7
+
+Tour	noir	0	7
+
+Cavalier	noir	7	1
+
+Fou	noir	7	2
+
+Dame	noir	7	3
+
+Roi	noir	7	4
+
+Fou	noir	7	5
+
+Cavalier	noir	7	6
+
+Tour	noir	7	7
